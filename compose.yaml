@@ -1,0 +1,42 @@
+services:
+  mvc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5090:8080"
+    environment:
+      RaceDayApi__BaseUrl: http://api:8080/
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "127.0.0.1:5080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      HttpsRedirection__Enabled: "false"
+      Database__Provider: "${RACEDAY_DATABASE_PROVIDER:-Sqlite}"
+      Database__Initialize: "${RACEDAY_DATABASE_INITIALIZE:-true}"
+      ConnectionStrings__RaceDay: "${RACEDAY_DATABASE_CONNECTION:-Data Source=/data/raceday.db}"
+      ConnectionStrings__RaceDayBlobs: "${RACEDAY_BLOB_CONNECTION:-DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;}"
+    volumes:
+      - raceday-db:/data
+    depends_on:
+      - azurite
+    restart: unless-stopped
+
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:3.35.0
+    command: azurite-blob --blobHost 0.0.0.0 --location /data --disableProductStyleUrl --disableTelemetry
+    volumes:
+      - raceday-blobs:/data
+    restart: unless-stopped
+
+volumes:
+  raceday-db:
+  raceday-blobs:
