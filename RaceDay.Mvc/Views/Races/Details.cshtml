@@ -1,0 +1,62 @@
+@model Race
+@{ ViewData["Title"] = Model.Name; }
+<a asp-action="Index">← Upcoming events</a>
+<h1>@Model.Name</h1>
+<p class="eyebrow">@Model.EventType · @Model.DistanceKm.ToString("0.##") km</p>
+@if (Model.BannerUrl is not null)
+{
+    <img class="banner wide" src="@Url.Action("Image", new { kind = "banner", id = Model.Id })" alt="Banner for @Model.Name">
+}
+<p><strong>@Model.EventDate.ToString("dd MMMM yyyy")</strong> · @Model.Location</p>
+<p class="description">@Model.Description</p>
+<section class="panel">
+    <h2>Categories</h2>
+    @if (Model.Categories is { Length: > 0 } categories)
+    {
+        <ul>
+        @foreach (var category in categories)
+        {
+            <li>
+                @category.Name
+                @if (category.DistanceKm is decimal distance) { <span>· @distance.ToString("0.##") km</span> }
+                @if (category.MinimumAge is int minAge) { <span>· Minimum age @minAge</span> }
+                @if (category.MaximumAge is int maxAge) { <span>· Maximum age @maxAge</span> }
+                @if (category.MaxParticipants is int capacity) { <span>· @capacity places</span> }
+            </li>
+        }
+        </ul>
+        @if (Model.EventDate.Date < DateTime.Today)
+        {
+            <p>Entries are closed for this event.</p>
+        }
+        else if (Context.Session.GetString("Role") == "Participant")
+        {
+            <form asp-controller="Participant" asp-action="Enter" asp-route-id="@Model.Id" method="post" class="inline">
+                <label>Choose a category
+                    <select name="CategoryId" required>
+                        <option value="">Select category</option>
+                        @foreach (var category in categories) { <option value="@category.Id">@category.Name</option> }
+                    </select>
+                </label>
+                <button>Enter event</button>
+            </form>
+        }
+        else if (Context.Session.GetInt32("UserId") is null)
+        {
+            <a asp-controller="Account" asp-action="Login">Sign in as a Participant to enter</a>
+        }
+    }
+    else { <p>Categories have yet to be added.</p> }
+</section>
+@if (Model.Routes is { Length: > 0 } routes)
+{
+    <section class="panel">
+        <h2>Routes</h2>
+        @foreach (var route in routes)
+        {
+            <h3>@route.Name</h3>
+            <p>@route.Description</p>
+            @if (route.DistanceKm is decimal distance) { <p>@distance.ToString("0.##") km</p> }
+        }
+    </section>
+}

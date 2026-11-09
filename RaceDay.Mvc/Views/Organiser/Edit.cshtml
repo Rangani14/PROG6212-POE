@@ -1,0 +1,22 @@
+@model RaceEditor
+@{ ViewData["Title"] = Model.Id == 0 ? "Create event" : "Edit event"; }
+<a asp-action="Index">← Organiser dashboard</a>
+<h1>@ViewData["Title"]</h1>
+<section class="panel">
+    @if (Model.BannerUrl is not null)
+    {
+        <img class="banner wide" src="@Url.Action("Image", "Races", new { kind = "banner", id = Model.Id })" alt="Current event banner">
+    }
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data" class="stack">
+        <div asp-validation-summary="All" class="validation"></div>
+        <label asp-for="Fields.Name">Event name</label><input asp-for="Fields.Name" required>
+        <label asp-for="Fields.Description">Description</label><textarea asp-for="Fields.Description" rows="4" required></textarea>
+        <label asp-for="Fields.EventDate">Event date</label><input asp-for="Fields.EventDate" type="date" required>
+        <label asp-for="Fields.Location">Location</label><input asp-for="Fields.Location" required>
+        <label asp-for="Fields.DistanceKm">Distance (km)</label><input asp-for="Fields.DistanceKm" type="number" step="0.01" min="0.1" max="1000" required>
+        <label asp-for="Fields.EventType">Event type</label>
+        <select asp-for="Fields.EventType"><option>Run</option><option>Walk</option><option>Cycle</option></select>
+        <label for="banner">Event banner (PNG or JPEG, up to 5 MB)</label><input id="banner" name="banner" type="file" accept="image/jpeg,image/png">
+        <button>Save event</button>
+    </form>
+</section>

@@ -1,0 +1,80 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RaceDay.Mvc
+build_property.RootNamespace = RaceDay.Mvc
+build_property.ProjectDir = C:\Users\rramp\Desktop\RaceDay_PROG6212_Part3_Ready_To_Run\RaceDay-Part3\RaceDay.Mvc\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\rramp\Desktop\RaceDay_PROG6212_Part3_Ready_To_Run\RaceDay-Part3\RaceDay.Mvc
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Organiser/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pc2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Organiser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pc2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Organiser/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pc2VyXE1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Participant/Entries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcRW50cmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Participant/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Participant/Results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Races/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Races/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rramp/Desktop/RaceDay_PROG6212_Part3_Ready_To_Run/RaceDay-Part3/RaceDay.Mvc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
