@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+TestResults/
+.env
+appsettings.Local.json
+
+.verify/
+*.db
+*.db-shm
+*.db-wal
+
+.raceday-blobs/
