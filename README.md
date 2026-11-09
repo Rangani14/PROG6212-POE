@@ -49,4 +49,4 @@ On Windows, I use `Start-RaceDay.cmd` with the .NET 8 SDK installed. The launche
 
 In my demo, I create a running event as an Organiser and add an **Open 10 km** category. I then sign in as a Participant in a separate browser session, enter the event and show the confirmed entry under **My Events**. To demonstrate result publishing without waiting for race day, I move the demo event date to yesterday, publish a finish time and position, and check that they appear under **My Results**.
 
-**Demo video:** [Add your unlisted YouTube link here]
+**Demo video:** [https://youtu.be/Dty-Cmi_d3U?si=i5W1GurJ1LZXrr8J]
